@@ -1,0 +1,81 @@
+﻿@model Bibliotecaaa.Models.Libro
+
+@{
+    ViewData["Title"] = "Borrar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="index-page">
+
+    <h1>Borrar</h1>
+
+    <h3>¿Estás seguro de borrar este libro?</h3>
+    <div>
+        <h4>Libro</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Titulo)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Titulo)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.AutorNavigation)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.AutorNavigation.AutorNombre)  <!-- Asegúrate de acceder a la propiedad AutorNombre -->
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Genero)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.GeneroNavigation.nombre)  <!-- Accede correctamente a la propiedad de Genero -->
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Descripcion)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Portada)
+            </dt>
+            <dd class="col-sm-10">
+                @if (!string.IsNullOrEmpty(Model.Portada))
+                {
+                    <img src="@Model.Portada" alt="Portada del libro" style="width: 150px; height: 200px;" />
+                }
+                else
+                {
+                    <span>No image available</span>
+                }
+            </dd>
+
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.FechaPublicacion)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.FechaPublicacion)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Disponible)
+            </dt>
+           <!-- <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Disponible)
+             </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.FechaAgregado)
+             </dt>-->
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.FechaAgregado)
+            </dd>
+        </dl>
+
+        <!-- Formulario de Borrado -->
+        <form method="post" asp-action="Delete" asp-route-id="@Model.IdLibro">
+            <input type="hidden" asp-for="IdLibro" />
+            <button type="submit" class="btn btn-danger">Borrar</button> |
+            <a asp-action="Index" class="btn btn-secondary">Volver</a>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,542 @@
+/* Fondo general de la página */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #fff; /* Fondo blanco para la página */
+}
+
+/* SECCIÓN DEL LOGIN */
+.login-card-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    height: 80vh;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(251, 115, 91, 0.7);
+    padding: 30px;
+    background-color: #ffffff;
+}
+
+/* Formulario de login */
+.login-card {
+    width: 50%;
+    padding: 30px;
+    margin-left: 50px;
+}
+
+/* Imagen de login */
+.login-image-container {
+    width: 45%;
+    height: 100%;
+}
+
+.login-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px; /* Redondeo de imagen */
+}
+
+/* Estilos para los campos de formulario */
+.login-card .form-control {
+    margin-bottom: 15px;
+    border: 1px solid #fb735b;
+    color: #fb735b;
+    background-color: #fff;
+}
+
+    .login-card .form-control:focus {
+        border-color: #fb735b;
+        box-shadow: 0 0 8px rgba(251, 115, 91, 0.7);
+    }
+
+/* Estilo de enlaces y etiquetas en el login */
+.login-card a {
+    color: #fb735b;
+    text-decoration: none;
+}
+
+    .login-card a:hover {
+        color: #e04a3a;
+    }
+
+.login-card label, .login-card .text-danger {
+    color: #fb735b;
+}
+
+.login-card .text-danger {
+    color: #e04a3a;
+}
+
+/* Botón en login */
+.login-card .btn-primary:hover,
+.login-card .btn-primary:focus,
+.login-card .btn-primary:active {
+    background-color: #fb735b;
+    border-color: #fb735b;
+    box-shadow: 0 0 0 4px rgba(251, 115, 91, 0.4);
+    outline: none;
+}
+
+/* SECCIÓN DEL REGISTRO */
+.register-card-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(251, 115, 91, 0.7);
+    padding: 30px;
+    background-color: #ffffff;
+    margin-top: -32px;
+    min-height: 80vh;
+}
+
+.register-card {
+    width: 50%;
+    padding: 20px;
+    margin-left: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: auto;
+}
+
+/* Imagen de registro */
+.register-image-container {
+    width: 48%;
+    height: 100%;
+}
+
+.register-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Estilos del formulario */
+.register-card .form-control {
+    margin-bottom: 15px;
+    border: 1px solid #fb735b;
+    color: #fb735b;
+    background-color: #fff;
+}
+
+    .register-card .form-control:focus {
+        border-color: #fb735b;
+        box-shadow: 0 0 8px rgba(251, 115, 91, 0.7);
+    }
+
+.register-card label {
+    color: #fb735b;
+}
+
+/* Botón en registro */
+.register-card .btn-primary:hover,
+.register-card .btn-primary:focus,
+.register-card .btn-primary:active {
+    background-color: #fb735b;
+    border-color: #fb735b;
+    box-shadow: 0 0 0 4px rgba(251, 115, 91, 0.4);
+    outline: none;
+}
+
+/* SECCIÓN FORGOTPASSWORD */
+body.forgot-password-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+}
+
+.forgot-password-page .card-container {
+    width: 18cm;
+    background-color: #fff;
+    box-shadow: 0 10px 30px rgba(251, 115, 91, 0.6);
+    border-radius: 15px;
+    padding: 30px;
+    margin-top: 100px;
+}
+
+.forgot-password-page .form-control {
+    width: 13cm;
+    padding: 15px;
+    border: 1px solid #fb735b;
+    border-radius: 5px;
+}
+
+/* Botón en forgot password */
+.forgot-password-page .btn-primary:hover,
+.forgot-password-page .btn-primary:focus,
+.forgot-password-page .btn-primary:active {
+    background-color: #fb735b;
+    border-color: #fb735b;
+    box-shadow: 0 0 0 4px rgba(251, 115, 91, 0.4);
+    outline: none;
+}
+
+/* SECCIÓN RESEND EMAIL CONFIRMATION */
+body.resend-email-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+}
+
+.resend-email-page .card-container {
+    width: 18cm;
+    background-color: #fff;
+    box-shadow: 0 10px 30px rgba(251, 115, 91, 0.6);
+    border-radius: 15px;
+    padding: 30px;
+    margin-top: 100px;
+}
+
+.resend-email-page .form-control {
+    width: 13cm;
+    padding: 15px;
+    border: 1px solid #fb735b;
+    border-radius: 5px;
+}
+
+/* Botón en resend email */
+.resend-email-page .btn-primary:hover,
+.resend-email-page .btn-primary:focus,
+.resend-email-page .btn-primary:active {
+    background-color: #fb735b;
+    border-color: #fb735b;
+    box-shadow: 0 0 0 4px rgba(251, 115, 91, 0.4);
+    outline: none;
+}
+
+/* Configuración general de botones */
+.btn-primary {
+    background-color: #e04a3a;
+    border-color: #e04a3a;
+    color: #fff;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+    outline: none;
+}
+
+    .btn-primary:hover {
+        background-color: #fb735b;
+        border-color: #fb735b;
+    }
+
+/* SECCIÓN DE PERFIL DE USUARIO */
+.account-settings-wrapper {
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #fb735b;
+    box-shadow: 0 10px 30px rgba(251, 115, 91, 0.7);
+}
+
+/* DASHBOARD */
+
+/* Barra de navegación horizontal */
+.navbar {
+    width: 100%;
+    background-color: #fdbf6f; /* Naranja claro */
+    height: 60px;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra para el navbar */
+    z-index: 1;
+}
+
+    /* Enlaces del navbar alineados horizontalmente */
+    .navbar .nav-links {
+        display: flex;
+        gap: 20px;
+    }
+
+    .navbar a {
+        color: #333;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 10px 15px;
+        border-radius: 5px;
+        transition: background-color 0.3s, transform 0.3s, color 0.3s;
+    }
+
+        /* Efecto dinámico al pasar el cursor por los botones */
+        .navbar a:hover {
+            background-color: #777777; /* Color naranja más oscuro al pasar el cursor */
+            color: #fff; /* Cambia el texto a blanco */
+            transform: scale(1.1); /* Agranda el botón ligeramente */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Añade sombra al pasar el cursor */
+        }
+
+/* Área de saludo y cerrar sesión a la derecha */
+.header .user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.header a {
+    color: #d35400;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+    .header a:hover {
+        text-decoration: underline;
+    }
+
+/* Fondo del dashboard con color cálido que combine con el naranja */
+.dashboard {
+    background: linear-gradient(to bottom, #fdbf6f, #ffb84d); /* Degradado de naranja a amarillo suave */
+    padding: 20px;
+    min-height: 100vh;
+    backdrop-filter: blur(10px); /* Aplica un desenfoque al fondo detrás del dashboard */
+}
+
+    /* Títulos dentro del dashboard */
+    .dashboard h1, .dashboard h2, .dashboard h3 {
+        color: #333; /* Color oscuro para el texto */
+        font-size: 2rem;
+    }
+
+/* Área principal de contenido debajo del navbar */
+.main-content {
+    margin-top: 80px; /* Espacio para el navbar fijo */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo ligeramente transparente */
+    backdrop-filter: blur(8px); /* Desenfoque ligero del fondo */
+    min-height: 100vh;
+}
+/* Sección de inicio */
+.inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+/* Contenido dentro de la sección */
+.inicio-contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2; /* Para que la frase esté sobre las imágenes */
+}
+
+/* Estilo de las imágenes */
+.inicio-imagen {
+    width: 250px; /* Tamaño original de las imágenes */
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%; /* Bordes redondeados */
+    filter: blur(5px); /* Desenfoque en los bordes */
+    transition: transform 0.3s, filter 0.3s; /* Transición suave */
+    margin: 60px; /* Aumentamos el margen para separar más las imágenes */
+}
+
+/* Imagen central (en el medio) */
+.inicio-central {
+    width: 300px; /* Imagen central más grande */
+    height: 300px;
+    z-index: 1; /* La imagen central se coloca encima */
+    margin-bottom: 100px; /* Espacio más amplio debajo para la frase */
+    filter: blur(3px); /* Desenfoque suave */
+}
+
+/* Imagen de la izquierda */
+.inicio-izquierda {
+    position: absolute;
+    left: 10%; /* Mayor separación hacia la izquierda */
+    top: 25%;
+    transform: translateY(-10%);
+    filter: blur(3px); /* Desenfoque suave */
+}
+
+/* Imagen de la derecha */
+.inicio-derecha {
+    position: absolute;
+    right: 10%; /* Mayor separación hacia la derecha */
+    top: 25%;
+    transform: translateY(-10%);
+    filter: blur(3px); /* Desenfoque suave */
+}
+
+/* Imagen hacia abajo */
+.inicio-abajo {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Efecto al pasar el mouse sobre las imágenes */
+.inicio-imagen:hover {
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen */
+    filter: blur(0); /* Elimina el desenfoque al pasar el mouse */
+}
+
+/* Frase en el medio */
+.inicio-frase {
+    font-size: 2rem; /* Tamaño de la frase más grande */
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-top: 30px; /* Más espacio entre la frase y las imágenes */
+    z-index: 2; /* Para que la frase esté sobre las imágenes */
+}
+
+
+/* Estilo para la frase */
+.inicio-frase {
+    position: relative;
+    top: 70%; /* Mueve el texto más abajo */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0; /* Texto detrás de las imágenes */
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Sombra suave para resaltar el texto */
+    -webkit-text-stroke: 1px black; /* Añadir trazo negro fino */
+    text-stroke: 1px black; /* Para compatibilidad en otros navegadores */
+    transition: color 0.3s ease, font-size 0.3s ease, letter-spacing 0.3s ease; /* Transiciones suaves */
+}
+
+    /* Efectos de hover para la frase */
+    .inicio-frase:hover {
+        font-size: 2.7rem; /* Aumentar un poco el tamaño del texto */
+        color: #4e4e4e; /* Color amarillo vibrante */
+        letter-spacing: 3px; /* Aumenta el espaciado entre las letras */
+        text-shadow: 4px 4px 15px rgba(255, 255, 204, 0.8), 0 0 25px rgba(255, 255, 204, 0.5); /* Efecto de resplandor amarillo claro */
+    }
+
+body {
+    background: radial-gradient(circle, #d3d3d3 0%, #a9a9a9 50%, #000 100%); /* Degradado radial desde gris claro hasta negro */
+    background-attachment: fixed; /* Hace que el fondo no se mueva al hacer scroll */
+}
+
+.btn-custom {
+    background-color: #4e4e4e;
+    color: white;
+    padding: 10px 20px; /* Ajusta el tamaño del botón si es necesario */
+    text-align: center;
+    border-radius: 5px; /* Bordes redondeados */
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.3s ease; /* Efecto de transición suave */
+}
+
+    .btn-custom:hover {
+        background-color: #5555; /* Color más oscuro cuando se pasa el ratón */
+        transform: scale(1.05); /* Hace que el botón crezca un poco */
+    }
+
+/* Estilos generales de la tabla */
+.table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: separate;
+    border-spacing: 0 10px; /* Separación entre filas */
+    background-color: #f9f9f9;
+    border-radius: 15px; /* Bordes redondeados para la tabla */
+    overflow: hidden; /* Para evitar que los bordes redondeados se vean cortados */
+}
+
+    /* Estilo de los encabezados */
+    .table th {
+        background-color: #292929; /* piel clara brillante para los encabezados */
+        color: white;
+        text-align: left;
+        padding: 20px;
+        font-weight: bold;
+        font-size: 1.2em;
+        border-top-left-radius: 15px; /* Bordes redondeados solo en la parte superior */
+        border-top-right-radius: 15px; /* Bordes redondeados solo en la parte superior */
+    }
+
+    /* Filas de la tabla */
+    .table td {
+        padding: 12px;
+        text-align: left;
+        vertical-align: middle;
+        border-bottom: 1px solid #ddd; /* Línea de separación sutil */
+        border-radius: 8px; /* Bordes redondeados en cada celda */
+        transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave */
+    }
+
+    /* Colorear filas alternadas */
+    .table tbody tr:nth-child(even) {
+        background-color: #f4f7f6; /* Fondo suave para las filas pares */
+    }
+
+    .table tbody tr:nth-child(odd) {
+        background-color: #ffffff; /* Fondo blanco para las filas impares */
+    }
+
+    /* Efecto al pasar el ratón por encima de las filas */
+    .table tbody tr:hover {
+        background-color: #e0f7ff; /* Color suave azul */
+        transform: scale(1.03); /* Le da un ligero aumento al pasar el ratón */
+    }
+
+/* Estilos de los botones */
+.btn {
+    padding: 10px 15px;
+    margin-right: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: white;
+    background-color: #4e4e4e;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+    /* Efecto hover en botones */
+    .btn:hover {
+        opacity: 1;
+        background-color: #6c757d; /* Gris más claro */
+    }
+
+/* Estilos para las imágenes de portada */
+.table img {
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Sombra en la tabla */
+.table {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave alrededor de la tabla */
+}
+
+    /* Mejorar la visibilidad de la última fila */
+    .table tbody tr:last-child {
+        border-bottom: 2px solid #007bff; /* Un borde más grueso para la última fila */
+    }
+
+/* Agregar un pequeño margen en la tabla */
+.table-container {
+    margin: 20px;
+}

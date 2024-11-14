@@ -1,0 +1,54 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Perfil";
+    ViewData["ActivePage"] = ManageNavPages.Index;
+}
+
+<h3>@ViewData["Title"]</h3>
+<partial name="_StatusMessage" for="StatusMessage" />
+<div class="row">
+    <div class="col-md-6">
+        <form id="profile-form" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+
+            <!-- Nombre -->
+            <div class="form-floating mb-3">
+                <input asp-for="Input.FirstName" class="form-control" placeholder="Por favor, ingresa tu nombre."
+                       readonly="@(Model.IsEditMode ? null : "readonly")" />
+                <label asp-for="Input.FirstName" style="color: #fb735b;">Nombre</label>
+
+                <span asp-validation-for="Input.FirstName" class="text-danger"></span>
+            </div>
+
+            <!-- Apellido -->
+            <div class="form-floating mb-3">
+                <input asp-for="Input.LastName" class="form-control" placeholder="Por favor, ingresa tu apellido."
+                       readonly="@(Model.IsEditMode ? null : "readonly")" />
+                <label asp-for="Input.LastName" style="color: #fb735b;">Apellido</label>
+                <span asp-validation-for="Input.LastName" class="text-danger"></span>
+            </div>
+
+            <!-- Fecha de Nacimiento -->
+            <div class="form-floating mb-3">
+                <input asp-for="Input.BirthDate" class="form-control" placeholder="Por favor, ingresa tu fecha de nacimiento."
+                       type="date" readonly="@(Model.IsEditMode ? null : "readonly")" />
+                <label asp-for="Input.BirthDate" style="color: #fb735b;">Fecha de Nacimiento</label>
+                <span asp-validation-for="Input.BirthDate" class="text-danger"></span>
+            </div>
+
+            <!-- Botones -->
+            @if (!Model.IsEditMode)
+            {
+                <button id="edit-profile-button" type="submit" class="w-100 btn btn-lg btn-outline-primary" name="action" value="Edit">Editar</button>
+            }
+            else
+            {
+                <button id="save-profile-button" type="submit" class="w-100 btn btn-lg btn-primary" name="action" value="Save">Guardar</button>
+                <a class="btn btn-danger" href="@Url.Page("./Index")">Cancelar</a>
+            }
+        </form>
+    </div>
+</div>
+
+

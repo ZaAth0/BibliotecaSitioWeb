@@ -1,0 +1,79 @@
+﻿@model Bibliotecaaa.Models.Libro
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edit</h1>
+
+<h4>Libro</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IdLibro" />
+            <div class="form-group">
+                <label asp-for="Titulo" class="control-label"></label>
+                <input asp-for="Titulo" class="form-control" />
+                <span asp-validation-for="Titulo" class="text-danger"></span>
+            </div>
+            <!-- Autor -->
+            <div class="form-group">
+                <label asp-for="AutorRel" class="control-label"></label>
+                <select asp-for="AutorRel" class="form-control" asp-items="ViewBag.Autores">
+                    <option value="">Seleccione un autor</option>
+                </select>
+                <span asp-validation-for="AutorRel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Genero" class="control-label"></label>
+                <input asp-for="Genero" class="form-control" />
+                <span asp-validation-for="Genero" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Descripcion" class="control-label"></label>
+                <input asp-for="Descripcion" class="form-control" />
+                <span asp-validation-for="Descripcion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Portada" class="control-label"></label>
+                <input asp-for="Portada" class="form-control" />
+                <span asp-validation-for="Portada" class="text-danger"></span>
+            </div>
+
+            @if (!string.IsNullOrEmpty(Model?.Portada))
+            {
+                <div class="form-group">
+                    <img src="@Model.Portada" alt="Portada del libro" style="width: 150px; height: 200px;" />
+                </div>
+            }
+
+            <div class="form-group">
+                <label for="FechaPublicacion" class="control-label">Fecha de publicación</label>
+                <input asp-for="FechaPublicacion" class="form-control" type="date" />
+                <span asp-validation-for="FechaPublicacion" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="FechaAgregado" class="control-label"></label>
+                <input asp-for="FechaAgregado" class="form-control" />
+                <span asp-validation-for="FechaAgregado" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

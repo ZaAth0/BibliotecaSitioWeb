@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Bibliotecaaa.Models.Libro>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="index-page">
+    <h1>ㅤㅤ</h1>
+    <h1>ㅤ</h1>
+    <p>
+        <a asp-action="Create" class="btn btn-primary">Crear un nuevo Libro</a>
+    </p>
+
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.Portada)</th>
+                <th>@Html.DisplayNameFor(model => model.Titulo)</th>
+                <th>@Html.DisplayNameFor(model => model.Genero)</th>
+                <th>@Html.DisplayNameFor(model => model.AutorNavigation)</th>
+                <th>@Html.DisplayNameFor(model => model.Descripcion)</th>
+                <th>@Html.DisplayNameFor(model => model.FechaPublicacion)</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @if (!string.IsNullOrEmpty(item.Portada))
+                        {
+                            <img src="@item.Portada" alt="Portada" style="width: 100px; height: 150px;" />
+                        }
+                        else
+                        {
+                            <span>No image</span>
+                        }
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.Titulo)</td>
+                    <td>@item.GeneroNavigation?.nombre</td>
+                    <td>@item.AutorNavigation?.AutorNombre</td>
+                    <td>@Html.DisplayFor(modelItem => item.Descripcion)</td>
+                    <td>@Html.DisplayFor(modelItem => item.FechaPublicacion)</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.IdLibro" class="btn btn-warning">
+                            <i class="fa-solid fa-pen-to-square"></i> Editar
+                        </a>
+                        <a asp-action="Details" asp-route-id="@item.IdLibro" class="btn btn-info">
+                            <i class="fa-solid fa-circle-info"></i> Detalles
+                        </a>
+                        <a asp-action="Delete" asp-route-id="@item.IdLibro" class="btn btn-danger">
+                            <i class="fa-solid fa-trash"></i> Eliminar
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
